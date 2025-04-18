@@ -12,7 +12,7 @@ import { InlineContactForm } from "@/components/inline-contact-form"
 import { AnnouncementBanner } from "@/components/announcement-banner"
 import { useState, useEffect } from "react"
 import { BarChart3, Clock, Eye, Factory, Globe, LineChart, Truck, Warehouse, Wrench } from "lucide-react"
-import { track } from "@vercel/analytics"
+import { track } from "@vercel/analytics/react"
 
 export default function Home() {
   const [isContactFormOpen, setIsContactFormOpen] = useState(false)

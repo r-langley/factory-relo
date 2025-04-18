@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { supabaseServer } from "@/lib/supabase/server"
 import { Button } from "@/components/ui/button"
-import { track } from "@vercel/analytics"
+import { track } from "@vercel/analytics/react"
 
 interface ContactSubmission {
   id: string

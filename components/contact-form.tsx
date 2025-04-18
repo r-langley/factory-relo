@@ -9,7 +9,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { X, Shield } from "lucide-react"
-import { track } from "@vercel/analytics"
+import { track } from "@vercel/analytics/react"
 
 interface ContactFormProps {
   isOpen: boolean

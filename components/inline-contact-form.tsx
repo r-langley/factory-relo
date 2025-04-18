@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Shield } from "lucide-react"
-import { track } from "@vercel/analytics"
+import { track } from "@vercel/analytics/react"
 
 export function InlineContactForm() {
   const [name, setName] = useState("")

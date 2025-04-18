@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { X } from "lucide-react"
 import Link from "next/link"
+import { track } from "@vercel/analytics/react"
 
 interface AnnouncementBannerProps {
   className?: string
@@ -12,6 +13,20 @@ export function AnnouncementBanner({ className = "" }: AnnouncementBannerProps) 
   const [isVisible, setIsVisible] = useState(true)
 
   if (!isVisible) return null
+
+  const handleLinkClick = () => {
+    // Track when users click the tariff analysis tool link
+    track("banner_link_clicked", {
+      destination: "tariffsim.com",
+      banner_text: "Looking to understand your tariff exposure?",
+    })
+  }
+
+  const handleClose = () => {
+    // Track when users close the banner
+    track("banner_closed")
+    setIsVisible(false)
+  }
 
   return (
     <div className={`bg-[#975A16] text-white py-2 px-4 relative ${className}`}>
@@ -23,12 +38,13 @@ export function AnnouncementBanner({ className = "" }: AnnouncementBannerProps) 
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-medium"
+            onClick={handleLinkClick}
           >
             Check out our Tariff Analysis Tool here
           </Link>
         </p>
         <button
-          onClick={() => setIsVisible(false)}
+          onClick={handleClose}
           className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white/80 hover:text-white"
           aria-label="Close announcement"
         >
