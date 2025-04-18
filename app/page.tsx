@@ -115,7 +115,7 @@ export default function Home() {
 
           {/* CTA Section with Inline Form */}
           <Section className="text-center">
-            <h2 className="text-3xl mb-6">Consulting packages starting at $25,000</h2>
+            <h2 className="text-3xl mb-6">Consulting packages starting at $5,000</h2>
             <p className="body-text mb-8">Transform uncertainty into opportunity.</p>
             <InlineContactForm />
           </Section>
