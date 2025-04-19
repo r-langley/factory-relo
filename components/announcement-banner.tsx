@@ -32,7 +32,7 @@ export function AnnouncementBanner({ className = "" }: AnnouncementBannerProps) 
     <div className={`bg-[#975A16] text-white py-2 px-4 relative ${className}`}>
       <div className="mx-auto w-[95vw] sm:w-[85vw] md:w-[75vw] lg:max-w-[60vw] flex items-center justify-center">
         <p className="text-center text-sm">
-          Looking to understand your tariff exposure?{" "}
+          Trying to calculate your tariff exposure?{" "}
           <Link
             href="https://www.tariffsim.com"
             target="_blank"
@@ -40,7 +40,7 @@ export function AnnouncementBanner({ className = "" }: AnnouncementBannerProps) 
             className="underline font-medium"
             onClick={handleLinkClick}
           >
-            Check out our Tariff Analysis Tool here
+            Try our free Tariff Simulator here
           </Link>
         </p>
         <button
