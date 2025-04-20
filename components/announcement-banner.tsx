@@ -17,8 +17,8 @@ export function AnnouncementBanner({ className = "" }: AnnouncementBannerProps) 
   const handleLinkClick = () => {
     // Track when users click the tariff analysis tool link
     track("banner_link_clicked", {
-      destination: "tariffsim.com",
-      banner_text: "Looking to understand your tariff exposure?",
+      destination: "https://www.tariffsim.com?utm_source=factoryrelo&utm_medium=banner&utm_campaign=cross_promotion",
+      banner_text: "Trying to calculate your tariff exposure?",
     })
   }
 
@@ -34,7 +34,7 @@ export function AnnouncementBanner({ className = "" }: AnnouncementBannerProps) 
         <p className="text-center text-sm">
           Trying to calculate your tariff exposure?{" "}
           <Link
-            href="https://www.tariffsim.com"
+            href="https://www.tariffsim.com?utm_source=factoryrelo&utm_medium=banner&utm_campaign=cross_promotion"
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-medium"
