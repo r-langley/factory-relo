@@ -58,8 +58,7 @@ export default function Home() {
           <Section className="text-center">
             <h2 className="text-4xl mb-6">Manufacturing relocation experts</h2>
             <p className="body-text text-center mx-auto mb-10">
-              Factory Relo provides expert support for factory relocation, new product launches, and minimizing tariff
-              exposure amid shifting supply chains.
+              Navigate unprecedented times and build supply chain reslience with thousands of vetted factories and localized expertise.
             </p>
             <div className="max-w-md mx-auto">
               <InlineContactForm />
