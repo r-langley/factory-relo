@@ -5,13 +5,13 @@ import { GridBackground } from "@/components/grid-background"
 import { Logo } from "@/components/logo"
 import { Section } from "@/components/section"
 import { FeatureCard } from "@/components/feature-card"
-import { IconGridItem } from "@/components/icon-grid-item"
+import { ServiceCard } from "@/components/service-card"
 import { TrustBadge } from "@/components/trust-badge"
 import { ContactForm } from "@/components/contact-form"
 import { InlineContactForm } from "@/components/inline-contact-form"
 import { AnnouncementBanner } from "@/components/announcement-banner"
 import { useState, useEffect } from "react"
-import { BarChart3, Clock, Eye, Factory, Globe, LineChart, Truck, Warehouse, Wrench } from "lucide-react"
+import { BarChart3, Clock, Factory, Globe, Truck, Wrench, Shield, Calculator, Building2 } from "lucide-react"
 import { track } from "@vercel/analytics/react"
 
 export default function Home() {
@@ -56,10 +56,10 @@ export default function Home() {
 
           {/* Hero Section */}
           <Section className="text-center">
-            <h2 className="text-4xl mb-6">Navigate unprecedented times</h2>
+            <h2 className="text-4xl mb-6">Manufacturing relocation experts</h2>
             <p className="body-text text-center mx-auto mb-10">
-              Factory Relo provides expert consulting to help businesses navigate complex supply chain transitions,
-              minimize tariff exposure, and execute factory relocation without production interruption.
+              Factory Relo provides expert support for factory relocation, new product launches, and minimizing tariff
+              exposure amid shifting supply chains.
             </p>
             <div className="max-w-md mx-auto">
               <InlineContactForm />
@@ -67,49 +67,85 @@ export default function Home() {
             <TrustBadge />
           </Section>
 
-          {/* How it works */}
+          {/* Our Expertise Section */}
           <Section>
+            <h2 className="text-3xl text-center mb-8">Our Expertise</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <FeatureCard
-                title="Tariff Impact Assessment"
-                description="We perform evaluations of your current manufacturing footprint, identifying vulnerabilities and calculating potential cost savings through strategic relocation."
-                imageSrc="/images/cargo-ship.png"
-                imageAlt="Cargo ship loaded with shipping containers"
+                title="Consumer Electronics"
+                description="We offer expertise in PCB assembly, component sourcing, and testing protocols that meet international standards—all with built-in supply chain resilience to navigate component shortages and trade uncertainties."
+                imageSrc="/images/circuit-board.jpeg"
+                imageAlt="Close-up of a blue circuit board with electronic components"
               />
               <FeatureCard
-                title="Transition Planning"
-                description="Our team develops practical reshoring and nearshoring strategies tailored to your specific manufacturing needs with detailed ROI calculations."
-                imageSrc="/images/strategic-tower.png"
-                imageAlt="Industrial tower with staircase against sunset sky"
+                title="Apparel & Textiles"
+                description="Whether you need technical performance fabrics or sustainable materials, our partners deliver quality craftsmanship with transparent labor practices and the agility to shift production when market conditions change."
+                imageSrc="/images/apparel-tshirts.jpeg"
+                imageAlt="Neatly folded t-shirts in pink, white, and black colors"
               />
               <FeatureCard
-                title="Factory Move Execution"
-                description="Factory Relo consultants provide hands-on support throughout the entire relocation timeline while maintaining production continuity and reducing supply chain geopolitical risk."
-                imageSrc="/images/migration-airplane.png"
-                imageAlt="Airplane taking off at night with runway lights"
+                title="Packaged Goods"
+                description="Transform your packaged goods concepts into market-ready products with manufacturers experienced in packaging, distribution, and supply chain optimization for consumer products."
+                imageSrc="/images/packaged-boxes.jpeg"
+                imageAlt="Stacked brown cardboard boxes with branding"
               />
             </div>
           </Section>
 
-          {/* Results */}
+          {/* Navigate Trade Volatility Section */}
           <Section>
-            <h2 className="text-3xl text-center mb-8">Professional Services</h2>
-            <p className="body-text text-center mx-auto mb-12">
-              <span className="font-medium">Factory Relo</span> combines traditional consulting methodologies with deep
-              industry expertise to help consumer goods manufacturers analyze relocation costs, secure tax benefits, and
-              develop supplier diversification strategies during trade volatility.
+            <h2 className="text-3xl text-center mb-4">Navigate Trade Volatility With Confidence</h2>
+            <p className="body-text text-center mx-auto mb-12 max-w-3xl">
+              Our comprehensive approach helps manufacturers adapt to changing trade policies, minimize tariff exposure,
+              and build resilient supply chains for uncertain times.
             </p>
 
-            <div className="grid grid-cols-3 gap-x-6 gap-y-8 max-w-3xl mx-auto">
-              <IconGridItem icon={BarChart3} title="Tariff Exposure Reduction" />
-              <IconGridItem icon={Globe} title="Global Sourcing Strategy" />
-              <IconGridItem icon={Factory} title="US Reshoring Incentives" />
-              <IconGridItem icon={Truck} title="Supply Chain Relocation" />
-              <IconGridItem icon={Clock} title="Manufacturing Relocation Timeline" />
-              <IconGridItem icon={Eye} title="Supply Chain Geopolitical Risk" />
-              <IconGridItem icon={Warehouse} title="Consumer Goods Reshoring" />
-              <IconGridItem icon={LineChart} title="Factory Relocation ROI" />
-              <IconGridItem icon={Wrench} title="Relocation Project Management" />
+            <div className="grid md:grid-cols-3 gap-6">
+              <ServiceCard
+                icon={BarChart3}
+                title="Tariff Exposure Reduction"
+                description="Comprehensive analysis of your product portfolio to identify tariff vulnerabilities and develop targeted strategies that minimize duty exposure while maintaining quality standards."
+              />
+              <ServiceCard
+                icon={Globe}
+                title="Diversification Strategy"
+                description="Multi-region sourcing plans that protect your supply chain from disruption with optimized manufacturing networks across strategic countries based on your specific product requirements."
+              />
+              <ServiceCard
+                icon={Factory}
+                title="US Reshoring Incentives"
+                description="Navigate complex federal, state, and local tax credits, grants, and incentives designed to encourage domestic manufacturing, maximizing financial benefits of reshoring operations."
+              />
+              <ServiceCard
+                icon={Shield}
+                title="Supply Chain Geopolitical Risk"
+                description="AI-powered analysis of geopolitical factors affecting your supply chain with actionable mitigation strategies for high-risk scenarios and real-time monitoring of emerging threats."
+              />
+              <ServiceCard
+                icon={Clock}
+                title="Manufacturing Relocation Timeline"
+                description="Detailed project roadmaps with realistic milestones for manufacturing transitions, including contingency planning to prevent disruption during critical relocation phases."
+              />
+              <ServiceCard
+                icon={Truck}
+                title="Supply Chain Continuity"
+                description="Develop robust business continuity strategies that ensure uninterrupted operations during manufacturing transitions with dual-sourcing approaches and inventory management optimization."
+              />
+              <ServiceCard
+                icon={Calculator}
+                title="Factory Relocation ROI Analysis"
+                description="Comprehensive cost-benefit analysis of relocation options with 5-year projected ROI models that account for tariffs, labor, transportation, and incentives to support investment decisions."
+              />
+              <ServiceCard
+                icon={Building2}
+                title="Consumer Goods Industry Expertise"
+                description="Specialized knowledge in electronics, apparel, and packaged goods manufacturing with sector-specific relocation strategies that address unique requirements for each product category."
+              />
+              <ServiceCard
+                icon={Wrench}
+                title="Relocation Project Management"
+                description="End-to-end implementation support from our experienced team who have executed over 75 successful manufacturing relocations across consumer goods sectors worldwide."
+              />
             </div>
           </Section>
 
